@@ -20,7 +20,6 @@ const Navigation: NextPage = ({ children }) => {
             >
                 <a>Board</a>
             </Link>
-
         </nav>
     )
 }
