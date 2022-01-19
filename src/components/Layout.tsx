@@ -1,9 +1,16 @@
 import type { NextPage } from 'next'
 
+import Header from './Header'
+import Navigation from './Navigation'
+
 const Layout: NextPage = ({ children }) => {
     return (
         <div>
-            {children}
+            <Header />
+            <Navigation />
+            <main>
+                {children}
+            </main>
         </div>
     )
 }
