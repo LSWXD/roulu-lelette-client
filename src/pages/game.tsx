@@ -1,13 +1,7 @@
 import type { NextPage } from 'next';
 
-import Layout from 'components/common/Layout';
+import Index from 'components/game/Index';
 
-const Game: NextPage = () => {
-    return (
-        <Layout>
-            Game
-        </Layout>
-    );
-}
+const Game: NextPage = () => <Index />;
 
-export default Game
+export default Game;

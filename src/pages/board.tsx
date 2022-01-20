@@ -1,13 +1,7 @@
 import type { NextPage } from 'next';
 
-import Layout from 'components/common/Layout'
+import Index from 'components/board/Index';
 
-const Board: NextPage = () => {
-    return (
-        <Layout>
-            Board
-        </Layout>
-    )
-}
+const Board: NextPage = () => <Index />;
 
 export default Board
