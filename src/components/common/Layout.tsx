@@ -6,8 +6,6 @@ import Navigation from './Navigation'
 const Layout: NextPage = ({ children }) => {
     return (
         <div>
-            <Header />
-            <Navigation />
             <main>
                 {children}
             </main>

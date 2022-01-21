@@ -1,0 +1,41 @@
+@import 'styles/utils';
+
+.main {
+    display: flex;
+    position: relative;
+
+    width: 100vw;
+    height: 50vh;
+}
+
+.title {
+    @include center-horizontally(absolute);    
+    top: 20%;
+
+    font-size: 2rem;
+}
+
+.formInput {
+    @include center-horizontally(absolute);
+
+    top: 40%;
+
+    width: 200px;
+    height: 20px;
+
+    padding: 10px;
+    
+    border-radius: 5px;
+
+    border: 1px solid black;
+}
+
+.linkContainer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.link {
+    margin-left: 20px;
+}
