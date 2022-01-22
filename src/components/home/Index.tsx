@@ -22,7 +22,7 @@ const Index: NextPage = () => {
                         스코어 보드
                     </a>
                 </Link>
-                <Link href="/">
+                <Link href="/unit">
                     <a className={style.link}>
                         유닛 소개
                     </a>
