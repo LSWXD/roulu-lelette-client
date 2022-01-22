@@ -1,9 +1,31 @@
+/* package */
 import type { NextPage } from 'next';
+import { ChangeEvent, useEffect, useState } from 'react';
 
+/* component */
 import Link from 'next/link';
-import style from './index.module.scss';
+
+/* style */
+import style from './Index.module.scss';
 
 const Index: NextPage = () => {
+    const [id, setId] = useState<string>("");
+
+    const onChangeInput = (event: any) => {
+        const target: any = event.target;
+        const value: string = target.value;
+
+        setId(value);
+    }
+
+    const onKeyDownInput = (event: any) => {
+        const ENTER = 13;
+        if (event.keyCode === ENTER) {
+            setId("");
+        }
+
+    }
+
     return (
         <main className={style.main}>
             <h1 className={style.title}>
@@ -15,6 +37,9 @@ const Index: NextPage = () => {
                 name="homeIdInput"
                 id="homeIdInput"
                 placeholder="id 입력"
+                value={id}
+                onChange={onChangeInput}
+                onKeyDown={onKeyDownInput}
             />
             <div className={style.linkContainer}>
                 <Link href="/board">
@@ -22,7 +47,7 @@ const Index: NextPage = () => {
                         스코어 보드
                     </a>
                 </Link>
-                <Link href="/">
+                <Link href="/unit">
                     <a className={style.link}>
                         유닛 소개
                     </a>
@@ -30,6 +55,6 @@ const Index: NextPage = () => {
             </div>
         </main>
     );
-}
-
+} 
+ 
 export default Index;
