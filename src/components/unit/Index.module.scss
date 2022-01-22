@@ -1,0 +1,17 @@
+@import 'styles/utils';
+
+
+.main {
+    display: flex;
+    position: relative;
+
+    width: 100vw;
+    height: 50vh;
+}
+
+.title {
+    @include center-horizontally(absolute);    
+    top: 20%;
+
+    font-size: 2rem;
+}
