@@ -1,39 +1,3 @@
-<<<<<<< HEAD
-@import 'styles/utils';
-
-.outerDiv{
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    background-color: yellow;
-    top:20%;
-    width: 600px;
-}
-
-.rankNameDiv{
-    position: relative;
-    display: flex;
-    font-size: 25px;
-    height: 50px;
-    
-}
-.innerDiv{
-    position: relative;
-    display: flex;
-}
-.imgDiv{
-    position: relative;
-
-
-    height: 300px;
-    width: 200px;
-    border: 2px solid black;
-}
-
-.infoOuterDiv{
-    position: relative;
-    padding-left: 3%;
-=======
 @import 'styles/utils';
 
 .li{
@@ -87,5 +51,4 @@
 .infoSpan{
     height: 25px;
     font-weight: normal;
->>>>>>> ac43900c84c04326f51a444f87ea1c7ec38cc8c8
 }
