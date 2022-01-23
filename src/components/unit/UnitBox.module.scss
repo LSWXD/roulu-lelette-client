@@ -1,5 +1,8 @@
 @import 'styles/utils';
 
+.li{
+    list-style: none;
+}
 .outerDiv{
     position: fixed;
     display: flex;
@@ -19,10 +22,10 @@
 .innerDiv{
     position: relative;
     display: flex;
+    width: 100%;
 }
 .imgDiv{
     position: relative;
-
 
     height: 300px;
     width: 200px;
@@ -30,6 +33,22 @@
 }
 
 .infoOuterDiv{
-    position: relative;
+    display:flex;
+    flex-direction: column;
+    
     padding-left: 3%;
+    width: 400px;
+}
+
+.infoDiv{
+    flex-direction: row;
+
+    padding-bottom: 5%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.infoSpan{
+    height: 25px;
+    font-weight: normal;
 }

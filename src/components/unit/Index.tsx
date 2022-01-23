@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 
-import UnitBox from "./unitBox";
+import UnitBox from "./UnitBox";
 
 import style from "./index.module.scss";
 const Index: NextPage = () => {
