@@ -1,5 +1,6 @@
 /* package */
 import type { NextPage } from 'next';
+import { useRouter } from 'next/router';
 import { ChangeEvent, useEffect, useState } from 'react';
 
 /* component */
@@ -9,6 +10,9 @@ import Link from 'next/link';
 import style from './Index.module.scss';
 
 const Index: NextPage = () => {
+    const router = useRouter();
+
+
     const [id, setId] = useState<string>("");
 
     const onChangeInput = (event: any) => {
@@ -22,8 +26,8 @@ const Index: NextPage = () => {
         const ENTER = 13;
         if (event.keyCode === ENTER) {
             setId("");
+            router.push('/game');
         }
-
     }
 
     return (
@@ -55,6 +59,7 @@ const Index: NextPage = () => {
             </div>
         </main>
     );
-} 
- 
+}
+
+
 export default Index;
