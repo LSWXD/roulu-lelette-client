@@ -1,15 +1,17 @@
 @import 'styles/utils';
 
-.li{
-    list-style: none;
-}
 .outerDiv{
     position: fixed;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background-color: yellow;
     top:20%;
-    width: 600px;
+    max-width: 100%;
+}
+
+.section{
+    position: relative; 
+    margin-left: 5%;
 }
 
 .rankNameDiv{

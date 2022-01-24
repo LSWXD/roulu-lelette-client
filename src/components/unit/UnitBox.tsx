@@ -8,52 +8,74 @@ import { useEffect, useState } from "react";
 import style from "./UnitBox.module.scss";
 
 const UnitBox: NextPage = () => {
-  const data = [
+  const data: Object = [
     {
       name: "잼민이",
       type: "잼민이",
+      rank: "Normal",
       power: 5,
       description: "잼민이의 어쩌구",
     },
+    {
+      name: "잼민이2",
+      type: "잼민이2",
+      rank: "Rare",
+      power: 5,
+      description: "잼민이의 어쩌구2",
+    },
+    {
+      name: "잼민이3",
+      type: "잼민이3",
+      rank: "Rare",
+      power: 5,
+      description: "잼민이의 어쩌구3",
+    },
+
   ];
 
+  const [unitObjs, setUnitObj] = useState([]);
+
   useEffect(() => {
-    const unitName = data[0]
-    const unitType = data[1]
-    const unitPower = data[2]
-    const unitDescription = data[3]
-
-  }, data);
-
+    const unitData: any = data;
+    setUnitObj(unitData);
+  }, []);
 
   return (
     <div className={style.outerDiv}>
-      <li className={style.li}>
-        <div className={style.rankNameDiv}>Normal</div>
+      {unitObjs.map((unitObj: any, index: number) => {
+        const name: string = unitObj.name;
+        const type: string = unitObj.type;
+        const rank: string = unitObj.rank;
+        const power: number = unitObj.power;
+        const description: string = unitObj.description;
 
-        <div className={style.innerDiv}>
-          <img className={style.imgDiv} src="" alt="" />
+        return (
+          <section className={style.section} key={index}>
+            <div className={style.rankNameDiv}>{rank}</div>
+            <div className={style.innerDiv}>
+              <img className={style.imgDiv} src="" alt="" />
 
-          <div className={style.infoOuterDiv}>
-            <div className={style.infoDiv}>
-              이름: <span className={style.infoSpan}>잼민이</span>
+              <div className={style.infoOuterDiv}>
+                <div className={style.infoDiv}>
+                  이름: <span className={style.infoSpan}>{name}</span>
+                </div>
+
+                <div className={style.infoDiv}>
+                  타입: <span className={style.infoSpan}>{type}</span>
+                </div>
+
+                <div className={style.infoDiv}>
+                  효과: <span className={style.infoSpan}>{power}</span>
+                </div>
+
+                <div className={style.infoDiv}>
+                  설명: <span className={style.infoSpan}>{description}</span>
+                </div>
+              </div>
             </div>
-
-            <div className={style.infoDiv}>
-              타입: <span className={style.infoSpan}>잼민이</span>
-            </div>
-
-            <div className={style.infoDiv}>
-              효과: <span className={style.infoSpan}>+5</span>
-            </div>
-
-            <div className={style.infoDiv}>
-              설명:{" "}
-              <span className={style.infoSpan}>잼민이의 찡찡거림이다.</span>
-            </div>
-          </div>
-        </div>
-      </li>
+          </section>
+        );
+      })}
     </div>
   );
 };
