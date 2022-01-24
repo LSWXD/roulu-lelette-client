@@ -2,22 +2,29 @@
 
 .main {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    
     position: relative;
 
     width: 100vw;
-    height: 50vh;
+    height: 100vh;
+}
+
+.viewport {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+    align-items: center;
+    border: 1px solid black;
 }
 
 .title {
-    @include center-horizontally(absolute);    
-    top: 20%;
-
     font-size: 2rem;
+    border: 1px solid black;
 }
 
 .formInput {
-    @include center-horizontally(absolute);
-
     top: 40%;
 
     width: 200px;
@@ -31,9 +38,9 @@
 }
 
 .linkContainer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    width: 100%;
+
+    border: 1px solid black;
 }
 
 .link {
