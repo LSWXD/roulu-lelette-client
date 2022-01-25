@@ -38,7 +38,7 @@ const Index: NextPage = () => {
         if (!mainRef?.current) return;
         const mainElement: HTMLElement = mainRef.current;
 
-
+        mainElement.style.background = "black";
 
         const onResize = (entries: ResizeObserverEntry[], observer: ResizeObserver): void => {
             entries.forEach((entry: ResizeObserverEntry) => {
@@ -48,10 +48,19 @@ const Index: NextPage = () => {
                     const isPortrait: boolean = width < height;
 
                     if (isPortrait) {
+                        mainElement.style.width = `${window.innerWidth}px`;
 
+                        const newHeight: number = Number(window.innerWidth) / 16 * 9;
+                        mainElement.style.height = `${newHeight}px`;
                     } else {
+                        mainElement.style.height = `${window.innerHeight}px`;
 
+                        const newWidth: number = Number(window.innerHeight) / 9 * 16;
+                        mainElement.style.width = `${newWidth}px`;
                     }
+
+                    console.log(mainElement.style.height);
+                    console.log(mainElement.style.width);
                 }
             })
         }
