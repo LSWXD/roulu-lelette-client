@@ -32,11 +32,32 @@ const Index: NextPage = () => {
         }
     }
 
+
+
     useEffect(() => {
         if (!mainRef?.current) return;
-        const mainElement: HTMLAllCollection = mainRef.current;
+        const mainElement: HTMLElement = mainRef.current;
 
-        window
+
+
+        const onResize = (entries: ResizeObserverEntry[], observer: ResizeObserver): void => {
+            entries.forEach((entry: ResizeObserverEntry) => {
+                if (entry.target === mainElement) {
+                    const width: number = mainElement.offsetWidth;
+                    const height: number = mainElement.offsetHeight;
+                    const isPortrait: boolean = width < height;
+
+                    if (isPortrait) {
+
+                    } else {
+
+                    }
+                }
+            })
+        }
+        const resizeObserver = new ResizeObserver(onResize);
+
+        resizeObserver.observe(mainElement);
     }, [mainRef]);
 
 
