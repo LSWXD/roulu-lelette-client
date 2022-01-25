@@ -30,7 +30,20 @@ const UnitBox: NextPage = () => {
       power: 5,
       description: "잼민이의 어쩌구3",
     },
-
+    {
+      name: "잼민이4",
+      type: "잼민이4",
+      rank: "Rare",
+      power: 5,
+      description: "잼민이의 어쩌구4",
+    },
+    {
+      name: "잼민이5",
+      type: "잼민이5",
+      rank: "Rare",
+      power: 5,
+      description: "잼민이의 어쩌구5",
+    },
   ];
 
   const [unitObjs, setUnitObj] = useState([]);
@@ -41,41 +54,43 @@ const UnitBox: NextPage = () => {
   }, []);
 
   return (
-    <div className={style.outerDiv}>
-      {unitObjs.map((unitObj: any, index: number) => {
-        const name: string = unitObj.name;
-        const type: string = unitObj.type;
-        const rank: string = unitObj.rank;
-        const power: number = unitObj.power;
-        const description: string = unitObj.description;
+    <div className={style.body}>
+      <div className={style.outerDiv}>
+        {unitObjs.map((unitObj: any, index: number) => {
+          const name: string = unitObj.name;
+          const type: string = unitObj.type;
+          const rank: string = unitObj.rank;
+          const power: number = unitObj.power;
+          const description: string = unitObj.description;
 
-        return (
-          <section className={style.section} key={index}>
-            <div className={style.rankNameDiv}>{rank}</div>
-            <div className={style.innerDiv}>
-              <img className={style.imgDiv} src="" alt="" />
+          return (
+            <section className={style.section} key={index}>
+              <div className={style.rankNameDiv}>{rank}</div>
+              <div className={style.innerDiv}>
+                <img className={style.imgDiv} src="" alt="" />
 
-              <div className={style.infoOuterDiv}>
-                <div className={style.infoDiv}>
-                  이름: <span className={style.infoSpan}>{name}</span>
-                </div>
+                <div className={style.infoOuterDiv}>
+                  <div className={style.infoDiv}>
+                    이름: <span className={style.infoSpan}>{name}</span>
+                  </div>
 
-                <div className={style.infoDiv}>
-                  타입: <span className={style.infoSpan}>{type}</span>
-                </div>
+                  <div className={style.infoDiv}>
+                    타입: <span className={style.infoSpan}>{type}</span>
+                  </div>
 
-                <div className={style.infoDiv}>
-                  효과: <span className={style.infoSpan}>{power}</span>
-                </div>
+                  <div className={style.infoDiv}>
+                    효과: <span className={style.infoSpan}>{power}</span>
+                  </div>
 
-                <div className={style.infoDiv}>
-                  설명: <span className={style.infoSpan}>{description}</span>
+                  <div className={style.infoDiv}>
+                    설명: <span className={style.infoSpan}>{description}</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          </section>
-        );
-      })}
+            </section>
+          );
+        })}
+      </div>
     </div>
   );
 };

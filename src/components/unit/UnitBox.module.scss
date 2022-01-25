@@ -1,17 +1,29 @@
-@import 'styles/utils';
+
+.body{
+    
+}
 
 .outerDiv{
     position: fixed;
     display: flex;
     flex-direction: row;
-    background-color: yellow;
+    flex-wrap: wrap;
     top:20%;
-    max-width: 100%;
+       
+    overflow: auto;
 }
 
 .section{
     position: relative; 
-    margin-left: 5%;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    top:20%;
+
+    margin: 1%;
+    width: 48%;
+
+    border: 2px solid black;
 }
 
 .rankNameDiv{
