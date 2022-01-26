@@ -1,24 +1,5 @@
 @import 'styles/utils';
 
-.main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    position: relative;
-
-    width: 100vw;
-    height: 100vh;
-}
-
-.viewport {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;    
-    align-items: center;
-    border: 1px solid black;
-}
-
 .title {
     font-size: 2rem;
     border: 1px solid black;
