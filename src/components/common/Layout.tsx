@@ -4,9 +4,14 @@ import Header from './Header'
 import Navigation from './Navigation'
 
 import style from './Layout.module.scss';
-import { useEffect, useRef } from 'react';
+import React, { CSSProperties, FunctionComponent, ReactNode, useEffect, useRef } from 'react';
 
-const Layout: NextPage = ({ children }) => {
+type PropsType = {
+    children?: ReactNode,
+    style?: { readonly [key: string]: string }
+}
+
+const Layout: FunctionComponent = (props: PropsType) => {
     const mainRef = useRef(null);
 
     useEffect(() => {
@@ -41,12 +46,12 @@ const Layout: NextPage = ({ children }) => {
     }, [mainRef]);
 
     return (
-        <div className={`${style.viewport}`}>
+        <div className={`${style.viewport} ${props.style?.viewport}`}>
             <main
                 className={`${style.display}`}
                 ref={mainRef}
             >
-                {children}
+                {props.children}
             </main>
         </div >
     )

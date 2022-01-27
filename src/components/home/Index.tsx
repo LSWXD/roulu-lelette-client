@@ -1,7 +1,7 @@
 /* package */
 import type { NextPage } from 'next';
 import { useRouter } from 'next/router';
-import { ChangeEvent, useEffect, useRef, useState } from 'react';
+import { ChangeEvent, ReactNode, useEffect, useRef, useState } from 'react';
 
 /* component */
 import Link from 'next/link';
@@ -10,7 +10,7 @@ import Link from 'next/link';
 import style from './Index.module.scss';
 import Layout from 'components/common/Layout';
 
-const Index: NextPage = () => {
+const Index: ReactNode = () => {
     const router = useRouter();
 
     const mainRef = useRef(null);
@@ -35,7 +35,9 @@ const Index: NextPage = () => {
 
     return (
         <Layout
-
+            style={{
+                viewport: style.viewport
+            }}
         >
             <h1 className={style.title}>
                 룰루렐렛
