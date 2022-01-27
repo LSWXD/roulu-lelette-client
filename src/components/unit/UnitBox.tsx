@@ -17,11 +17,11 @@ const UnitBox: NextPage = () => {
       description: "잼민이의 어쩌구",
     },
     {
-      name: "잼민이2",
-      type: "잼민이2",
+      name: "엄",
+      type: "엄준식",
       rank: "Rare",
       power: 5,
-      description: "잼민이의 어쩌구2",
+      description: "1일커밋용....ㅠ",
     },
     {
       name: "잼민이3",
