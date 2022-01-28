@@ -4,19 +4,15 @@ import Header from './Header'
 import Navigation from './Navigation'
 
 import style from './Layout.module.scss';
-import React, { CSSProperties, FunctionComponent, ReactNode, useEffect, useRef } from 'react';
+import React, { FunctionComponent, useEffect, useRef } from 'react';
 
-type PropsType = {
-    children?: ReactNode,
-    style?: { readonly [key: string]: string }
-}
+const Layout: FunctionComponent = ({ children }) => {
 
-const Layout: FunctionComponent = (props: PropsType) => {
+
+
     const mainRef = useRef(null);
 
     useEffect(() => {
-        console.log(typeof style);
-
         if (!mainRef?.current) return;
 
         const mainElement: HTMLElement = mainRef.current;
@@ -46,12 +42,12 @@ const Layout: FunctionComponent = (props: PropsType) => {
     }, [mainRef]);
 
     return (
-        <div className={`${style.viewport} ${props.style?.viewport}`}>
+        <div className={`${style.viewport}`}>
             <main
                 className={`${style.display}`}
                 ref={mainRef}
             >
-                {props.children}
+                {children}
             </main>
         </div >
     )

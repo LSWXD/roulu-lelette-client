@@ -35,34 +35,33 @@ const Index: ReactNode = () => {
 
     return (
         <Layout
-            style={{
-                viewport: style.viewport
-            }}
         >
-            <h1 className={style.title}>
-                룰루렐렛
-            </h1>
-            <input
-                className={style.formInput}
-                type="text"
-                name="homeIdInput"
-                id="homeIdInput"
-                placeholder="id 입력"
-                value={id}
-                onChange={onChangeInput}
-                onKeyDown={onKeyDownInput}
-            />
-            <div className={style.linkContainer}>
-                <Link href="/board">
-                    <a className={style.link}>
-                        스코어 보드
-                    </a>
-                </Link>
-                <Link href="/unit">
-                    <a className={style.link}>
-                        유닛 소개
-                    </a>
-                </Link>
+            <div className={style.mainContainer}>
+                <h1 className={style.title}>
+                    룰루렐렛
+                </h1>
+                <input
+                    className={style.formInput}
+                    type="text"
+                    name="homeIdInput"
+                    id="homeIdInput"
+                    placeholder="id 입력"
+                    value={id}
+                    onChange={onChangeInput}
+                    onKeyDown={onKeyDownInput}
+                />
+                <div className={style.linkContainer}>
+                    <Link href="/board">
+                        <a className={style.link}>
+                            스코어 보드
+                        </a>
+                    </Link>
+                    <Link href="/unit">
+                        <a className={style.link}>
+                            유닛 소개
+                        </a>
+                    </Link>
+                </div>
             </div>
         </Layout>
     );
