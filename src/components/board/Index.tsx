@@ -5,7 +5,14 @@ import Layout from 'components/common/Layout';
 const Index: NextPage = () => {
     return (
         <Layout>
-            Game
+            <div className="titleContainer">
+                <h1 className="boardTitle"></h1>
+            </div>
+            <div className="boardItemContainer">
+                <div className="boardItem">
+                    
+                </div>
+            </div>
         </Layout>
     );
 }
