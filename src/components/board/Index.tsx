@@ -9,22 +9,22 @@ const Index: NextPage = () => {
     const boardItems = [
         {
             userId: "아이디1",
-            ranking: 0,
+            ranking: 1,
             score: 1000
         },
         {
             userId: "아이디2",
-            ranking: 0,
+            ranking: 2,
             score: 100
         },
         {
             userId: "아이디3",
-            ranking: 0,
+            ranking: 3,
             score: 10
         },
         {
             userId: "아이디4",
-            ranking: 0,
+            ranking: 4,
             score: 1
         }
     ];

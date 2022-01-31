@@ -1,0 +1,35 @@
+.rouletteContainer {
+    
+}
+
+.roulette {
+    display: flex;
+}
+
+.rouletteSlot {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 200px;
+    height: 400px;
+
+    text-align: center;
+
+    &:not(:first-child) {
+        margin-left: 20px;
+    }
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 15px;
+}
+
+.button {
+    border: 1px solid black;
+    border-radius: 10px;
+    background: none;
+
+    padding: 10px 15px;
+}
