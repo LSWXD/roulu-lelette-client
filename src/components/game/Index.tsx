@@ -3,9 +3,12 @@ import type { NextPage } from 'next';
 import Layout from 'components/common/Layout';
 
 import style from './Index.module.scss';
-import { useMemo } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 
 const Index: NextPage = () => {
+
+    const scrollRef = useRef(null);
+
     const slot1 = useMemo(() => {
         const minRotation: number = 5;
         const maxRotation: number = 10;
@@ -26,21 +29,37 @@ const Index: NextPage = () => {
             }
         ];
 
-        return rotator.map((_) => {
-            return slotItems.map((slotItem, index) => {
-                const name = slotItem.name;
-                return (
-                    <div
-                        key={name}
-                        className={style.slotItem}
-                    >
-                        {name}
-                    </div>
-                )
-            });
-        });
+        return (
+            <div
+                ref={scrollRef}
+                className={style.slotItemsContainer}
+            >
+                {rotator.map((_) => {
+                    return (
+                        <div className={style.slotItems}>
+                            {slotItems.map(slotItem => {
+                                const name = slotItem.name;
+                                return (
+                                    <div
+                                        key={name}
+                                        className={style.slotItem}
+                                    >
+                                        {name}
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    );
+                })}
+            </div>
+        );
     }, []);
 
+    useEffect(() => {
+        if (!scrollRef) return;
+
+        const scrollElement = scrollRef?.current;
+    }, [scrollRef]);
 
     return (
         <Layout>
