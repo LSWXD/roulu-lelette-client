@@ -1,0 +1,23 @@
+.roulette {
+    display: flex;
+    flex-direction: column;
+}
+
+.slots {
+    display: flex;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 15px;
+}
+
+.button {
+    border: 1px solid black;
+    border-radius: 10px;
+    background: none;
+
+    padding: 10px 15px;
+}
