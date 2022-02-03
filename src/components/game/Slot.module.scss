@@ -1,0 +1,32 @@
+// .rouletteSlot {
+//     position: relative;
+// }
+
+.slotItemsContainer {
+    position: relative;
+    
+    width: 200px;
+    height: 500px;
+    
+    border: 1px solid black;
+    border-radius: 10px;
+    
+    text-align: center;
+    overflow-y: auto;    
+
+    &::-webkit-scrollbar {
+        // display: none;
+    }
+}
+
+.slotItems {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    height: 100%;
+}
+
+.slotItem {
+    
+}
