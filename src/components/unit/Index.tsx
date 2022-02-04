@@ -9,10 +9,8 @@ const Index: NextPage = () => {
       <h1 className={style.title}>
         유닛소개
       </h1>
-
-      <UnitBox>
-
-      </UnitBox>
+      
+      <UnitBox></UnitBox>
     </main>
   );
 };
