@@ -1,20 +1,18 @@
 
-.body{
-    
-}
-
 .outerDiv{
-    position: fixed;
+    position: relative;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     top:20%;
-    
+    overflow: auto;
+
+    margin-bottom: 5%;
+    background-color: white;
 }
 
 .section{
     position: relative; 
-
     flex-direction: row;
     flex-wrap: wrap;
     top:20%;
@@ -30,6 +28,7 @@
     display: flex;
     font-size: 25px;
     height: 50px;
+    padding: 1%;
     
 }
 .innerDiv{
@@ -39,7 +38,6 @@
 }
 .imgDiv{
     position: relative;
-
     height: 300px;
     width: 200px;
     border: 2px solid black;

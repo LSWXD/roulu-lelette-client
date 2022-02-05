@@ -3,17 +3,17 @@
 
 .main {
     display: flex;
-    position: relative;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
 
-    width: 100vw;
-    height: 50vh;
-
-    overflow: auto;
+    background-color: pink;
 }
 
 .title {
-    @include center-horizontally(absolute);    
-    top: 20%;
-
     font-size: 2rem;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    color: white;
 }
