@@ -5,6 +5,10 @@ import Slot from './Slot';
 import style from './Roulette.module.scss';
 
 const Roulette: NextPage = () => {
+    const onClickButton = () => {
+
+    }
+
 
     return (
         <div className={style.roulette}>
@@ -14,7 +18,13 @@ const Roulette: NextPage = () => {
                 <Slot />
             </div>
             <div className={style.buttonContainer}>
-                <button className={style.button}>룰렛 돌리기</button>
+                <button
+                    className={style.button}
+                    onClick={onClickButton}
+                >
+                    룰렛 돌리기
+
+                </button>
             </div>
         </div>
     );

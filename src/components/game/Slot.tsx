@@ -2,9 +2,8 @@ import type { NextPage } from 'next';
 
 import style from './Slot.module.scss';
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { clear } from 'console';
 
-const Slot: NextPage = () => {
+const Slot: NextPage = props => {
     const scrollRef = useRef(null);
     const [scrollElement, setScrollElement] = useState(null);
     const [scrollMaxHeight, setScrollMaxHeight] = useState(-1);
@@ -68,9 +67,6 @@ const Slot: NextPage = () => {
         const slotEndTimer = (minimumSecond + Math.floor(Math.random() * maximumSecond)) % maximumSecond;
         const timeInterval = 10;
         const initialScrollInterval = timeInterval / slotEndTimer * scrollElement.scrollTop;
-
-        console.log("slotEndTimer", slotEndTimer)
-
 
         setScrollElement(scrollElement);
         setScrollTop(scrollElement.scrollTop);
