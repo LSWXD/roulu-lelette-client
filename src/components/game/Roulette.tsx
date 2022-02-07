@@ -5,9 +5,7 @@ import Slot from './Slot';
 import style from './Roulette.module.scss';
 
 const Roulette: NextPage = () => {
-    const onClickButton = () => {
-
-    }
+    const onClickButton = () => { }
 
 
     return (
